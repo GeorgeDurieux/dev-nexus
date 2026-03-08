@@ -1,0 +1,148 @@
+.skills-page {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.skills-page-title {
+	text-align: center;
+	margin-bottom: 24px;
+}
+
+.skills-categories {
+	width: 100%;
+}
+
+.skills-category-section {
+	width: 100%;
+	margin-bottom: 48px;
+}
+
+.skills-category-title {
+	text-align: center;
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 14px;
+	color: white;
+}
+
+/* PILLS WRAP */
+
+.skills-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+	margin-top: 20px;
+}
+
+/* PILL */
+
+.skills-card {
+	display: inline-flex;
+	align-items: center;
+	gap: 14px;
+
+	min-width: 180px;
+	padding: 14px 20px;
+
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 999px;
+
+	background: rgba(20, 20, 20, 0.78);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+
+	box-shadow:
+		0 8px 18px rgba(255, 255, 255, 0.05),
+		0 0 12px rgba(255, 255, 255, 0.06);
+
+	transition:
+		transform 0.22s ease,
+		box-shadow 0.22s ease,
+		background 0.22s ease;
+
+	overflow: hidden;
+	position: relative;
+}
+
+/* subtle internal gleam */
+.skills-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	background: linear-gradient(
+		120deg,
+		transparent 20%,
+		rgba(255, 255, 255, 0.06) 50%,
+		transparent 80%
+	);
+
+	transform: translateX(-120%);
+	pointer-events: none;
+}
+
+.skills-card:hover {
+	transform: translateY(-3px);
+
+	background: rgba(28, 28, 28, 0.88);
+
+	box-shadow:
+		0 12px 24px rgba(255, 255, 255, 0.08),
+		0 0 20px rgba(255, 255, 255, 0.1),
+		0 0 40px rgba(255, 255, 255, 0.08);
+}
+
+.skills-card:hover::before {
+	animation: skillPillGleam 1.8s linear infinite;
+}
+
+@keyframes skillPillGleam {
+	from {
+		transform: translateX(-120%);
+	}
+	to {
+		transform: translateX(120%);
+	}
+}
+
+/* ICON */
+
+.skills-card-icon {
+	width: 42px;
+	height: 42px;
+	flex-shrink: 0;
+}
+
+/* TEXT */
+
+.skills-card-name {
+	font-size: 1rem;
+	font-weight: 700;
+	color: white;
+	white-space: nowrap;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+	.skills-grid {
+		gap: 12px;
+	}
+
+	.skills-card {
+		min-width: 160px;
+		padding: 12px 16px;
+	}
+
+	.skills-card-icon {
+		width: 36px;
+		height: 36px;
+	}
+
+	.skills-card-name {
+		font-size: 0.95rem;
+	}
+}

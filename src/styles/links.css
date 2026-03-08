@@ -1,0 +1,88 @@
+.links-container {
+	width: 100%;
+}
+
+/* LINK CARD */
+
+.link-card {
+	position: relative;
+	display: block;
+	width: 100%;
+
+	padding: 20px;
+	margin: 16px 0;
+
+	text-align: center;
+	text-decoration: none;
+
+	color: white;
+
+	background: rgba(20, 20, 20, 0.75);
+	backdrop-filter: blur(6px);
+
+	border: 1px solid rgba(255, 255, 255, 0.08);
+
+	font-size: 1.2rem;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+
+	overflow: hidden;
+	cursor: pointer;
+
+	box-shadow:
+		0 8px 20px rgba(255, 255, 255, 0.06),
+		0 0 14px rgba(255, 255, 255, 0.08);
+
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		background 0.25s ease;
+}
+
+/* GLEAM */
+
+.link-card::before {
+	content: "";
+	position: absolute;
+
+	inset: 0;
+
+	background: linear-gradient(
+		120deg,
+		transparent 20%,
+		rgba(255, 255, 255, 0.08) 50%,
+		transparent 80%
+	);
+
+	transform: translateX(-120%);
+
+	pointer-events: none;
+}
+
+/* HOVER */
+
+.link-card:hover {
+	transform: scale(1.05);
+
+	box-shadow:
+		0 14px 34px rgba(255, 255, 255, 0.1),
+		0 0 30px rgba(255, 255, 255, 0.18),
+		0 0 80px rgba(255, 255, 255, 0.12);
+
+	background: rgba(30, 30, 30, 0.85);
+}
+
+.link-card:hover::before {
+	animation: linkCardGleam 1.8s ease-in-out infinite;
+}
+
+/* GLEAM ANIMATION */
+
+@keyframes linkCardGleam {
+	from {
+		transform: translateX(-120%);
+	}
+	to {
+		transform: translateX(120%);
+	}
+}

@@ -1,0 +1,41 @@
+:root {
+	/* CORE COLORS */
+
+	--bg-primary: #000000;
+	--bg-secondary: #121212;
+
+	--text-primary: #ffffff;
+	--text-secondary: #cccccc;
+	--text-muted: #888888;
+
+	--border-primary: rgba(255, 255, 255, 0.18);
+	--border-strong: rgba(255, 255, 255, 0.35);
+
+	/* ACCENT (not heavily used yet) */
+
+	--accent: #ffffff;
+
+	/* CARD SHADOWS */
+
+	--box-shadow:
+		0 10px 24px rgba(255, 255, 255, 0.14),
+		0 0 14px rgba(255, 255, 255, 0.18), 0 0 34px rgba(255, 255, 255, 0.14);
+
+	--box-shadow-hover:
+		0 18px 44px rgba(255, 255, 255, 0.2),
+		0 0 28px rgba(255, 255, 255, 0.28), 0 0 80px rgba(255, 255, 255, 0.2);
+
+	/* SOFTER CARD SHADOW */
+
+	--card-shadow-soft: 0 8px 20px rgba(255, 255, 255, 0.08);
+}
+
+/* GLOBAL BODY */
+
+body {
+	margin: 0;
+	font-family: system-ui, sans-serif;
+
+	background: var(--bg-primary);
+	color: var(--text-primary);
+}

@@ -1,0 +1,150 @@
+.projects-page {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.repo-container {
+	width: 100%;
+	max-width: 720px;
+
+	display: grid;
+	gap: 22px;
+}
+
+.repo-link {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: inherit;
+}
+
+/* CARD */
+
+.repo-card {
+	position: relative;
+
+	width: 100%;
+	padding: 22px;
+
+	background: rgba(20, 20, 20, 0.72);
+	backdrop-filter: blur(6px);
+
+	border: 1px solid rgba(255, 255, 255, 0.08);
+
+	box-shadow:
+		0 8px 20px rgba(255, 255, 255, 0.06),
+		0 0 14px rgba(255, 255, 255, 0.08);
+
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		background 0.25s ease;
+
+	cursor: pointer;
+
+	overflow: hidden;
+}
+
+/* energy gleam */
+
+.repo-card::before {
+	content: "";
+
+	position: absolute;
+	inset: 0;
+
+	background: linear-gradient(
+		120deg,
+		transparent 20%,
+		rgba(255, 255, 255, 0.08) 50%,
+		transparent 80%
+	);
+
+	transform: translateX(-120%);
+	pointer-events: none;
+}
+
+/* hover state */
+
+.repo-card:hover {
+	transform: scale(1.03);
+
+	box-shadow:
+		0 14px 34px rgba(255, 255, 255, 0.1),
+		0 0 30px rgba(255, 255, 255, 0.18),
+		0 0 80px rgba(255, 255, 255, 0.12);
+
+	background: rgba(30, 30, 30, 0.82);
+}
+
+/* animated gleam on hover */
+
+.repo-card:hover::before {
+	animation: repoGleam 1.8s ease-in-out infinite;
+}
+
+@keyframes repoGleam {
+	from {
+		transform: translateX(-120%);
+	}
+	to {
+		transform: translateX(120%);
+	}
+}
+
+/* TEXT */
+
+.repo-name {
+	margin: 0 0 12px 0;
+
+	font-size: 1.2rem;
+	font-weight: 700;
+
+	color: white;
+
+	word-break: break-word;
+}
+
+.repo-description {
+	margin: 0 0 18px 0;
+
+	line-height: 1.6;
+	color: rgba(255, 255, 255, 0.75);
+
+	min-height: 48px;
+}
+
+/* FOOTER */
+
+.repo-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.repo-language-wrapper {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* language indicator */
+
+.repo-language-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+
+	background: white;
+
+	box-shadow:
+		0 0 6px rgba(255, 255, 255, 0.6),
+		0 0 14px rgba(255, 255, 255, 0.5);
+}
+
+.repo-language {
+	color: rgba(255, 255, 255, 0.65);
+	font-size: 0.9rem;
+}

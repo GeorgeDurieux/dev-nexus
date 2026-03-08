@@ -1,0 +1,13 @@
+.learning-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 14px;
+	margin-top: 30px;
+}
+
+.learning-badge {
+	padding: 8px 14px;
+	border-radius: 20px;
+	background: #f3f4f6;
+}

@@ -1,0 +1,149 @@
+.education-section {
+	width: 100%;
+}
+
+.education-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 24px;
+	margin-top: 40px;
+}
+
+/* stronger 3D framed panel look */
+
+.education-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	min-height: 240px;
+	padding: 24px 22px 22px;
+
+	background: rgba(20, 20, 20, 0.8);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+
+	border: 1px solid rgba(255, 255, 255, 0.12);
+
+	box-shadow:
+		inset 1px 1px 0 rgba(255, 255, 255, 0.18),
+		inset -1px -1px 0 rgba(255, 255, 255, 0.05),
+		0 12px 28px rgba(255, 255, 255, 0.08),
+		0 0 20px rgba(255, 255, 255, 0.07);
+
+	overflow: hidden;
+
+	transition:
+		box-shadow 0.25s ease,
+		background 0.25s ease,
+		border-color 0.25s ease,
+		transform 0.25s ease;
+}
+
+/* stronger inner frame */
+.education-card::before {
+	content: "";
+	position: absolute;
+	inset: 5px;
+
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	pointer-events: none;
+}
+
+/* stronger top highlight line */
+.education-card::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background: rgba(255, 255, 255, 0.16);
+	pointer-events: none;
+}
+
+/* more pop, still not button-like */
+.education-card:hover {
+	background: rgba(28, 28, 28, 0.88);
+	transform: translateY(-3px);
+
+	box-shadow:
+		inset 1px 1px 0 rgba(255, 255, 255, 0.22),
+		inset -1px -1px 0 rgba(255, 255, 255, 0.06),
+		0 16px 34px rgba(255, 255, 255, 0.1),
+		0 0 28px rgba(255, 255, 255, 0.1);
+}
+
+.education-card--certificate {
+	border-left: 2px solid rgba(255, 255, 255, 0.24);
+}
+
+.education-card-title {
+	margin: 0 0 10px 0;
+	color: white;
+	font-size: 1.05rem;
+	font-weight: 700;
+}
+
+.education-card-text {
+	margin: 0;
+	line-height: 1.65;
+	color: rgba(255, 255, 255, 0.78);
+}
+
+.education-card-meta {
+	display: inline-block;
+	margin-top: 10px;
+	color: rgba(255, 255, 255, 0.58);
+	font-size: 0.95rem;
+}
+
+/* push button to bottom */
+.education-card-button {
+	margin-top: auto;
+	align-self: flex-start;
+
+	padding: 10px 14px;
+
+	background: rgba(255, 255, 255, 0.05);
+	color: white;
+
+	border: 1px solid rgba(255, 255, 255, 0.14);
+
+	font-weight: 600;
+	cursor: pointer;
+
+	box-shadow:
+		inset 1px 1px 0 rgba(255, 255, 255, 0.1),
+		0 4px 10px rgba(255, 255, 255, 0.05);
+
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.25s ease,
+		background 0.25s ease;
+}
+
+.education-card-button:hover {
+	transform: scale(1.03);
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow:
+		inset 1px 1px 0 rgba(255, 255, 255, 0.14),
+		0 10px 24px rgba(255, 255, 255, 0.1),
+		0 0 20px rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 900px) {
+	.education-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.education-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.education-card {
+		min-height: unset;
+	}
+}

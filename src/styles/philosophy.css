@@ -1,0 +1,108 @@
+.philosophy-list {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+/* PANEL */
+
+.philosophy-card {
+	position: relative;
+
+	width: 100%;
+	padding: 28px 26px;
+
+	background: rgba(20, 20, 20, 0.82);
+	backdrop-filter: blur(6px);
+
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-left: 2px solid rgba(255, 255, 255, 0.22);
+
+	box-shadow:
+		inset 1px 1px 0 rgba(255, 255, 255, 0.18),
+		inset -1px -1px 0 rgba(255, 255, 255, 0.05),
+		0 12px 28px rgba(255, 255, 255, 0.08),
+		0 0 20px rgba(255, 255, 255, 0.07);
+
+	overflow: hidden;
+
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		background 0.25s ease;
+}
+
+/* inner frame */
+
+.philosophy-card::before {
+	content: "";
+	position: absolute;
+	inset: 6px;
+
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	pointer-events: none;
+}
+
+/* energy pulse */
+
+.philosophy-card::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	background: linear-gradient(
+		120deg,
+		transparent 20%,
+		rgba(255, 255, 255, 0.08) 50%,
+		transparent 80%
+	);
+
+	transform: translateX(-120%);
+	pointer-events: none;
+}
+
+/* hover */
+
+.philosophy-card:hover {
+	transform: translateY(-4px);
+
+	background: rgba(28, 28, 28, 0.9);
+
+	box-shadow:
+		inset 1px 1px 0 rgba(255, 255, 255, 0.22),
+		inset -1px -1px 0 rgba(255, 255, 255, 0.06),
+		0 16px 34px rgba(255, 255, 255, 0.1),
+		0 0 28px rgba(255, 255, 255, 0.1);
+}
+
+/* energy animation */
+
+.philosophy-card:hover::after {
+	animation: philosophyPulse 2.2s linear infinite;
+}
+
+@keyframes philosophyPulse {
+	from {
+		transform: translateX(-120%);
+	}
+	to {
+		transform: translateX(120%);
+	}
+}
+
+/* title */
+
+.philosophy-card h3 {
+	margin-bottom: 12px;
+
+	color: white;
+	font-size: 1.15rem;
+	font-weight: 700;
+}
+
+/* body text */
+
+.philosophy-card p {
+	line-height: 1.75;
+	color: rgba(255, 255, 255, 0.78);
+}

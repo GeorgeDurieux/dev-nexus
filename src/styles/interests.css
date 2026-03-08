@@ -1,0 +1,194 @@
+.interests-section {
+	width: 100%;
+}
+
+.interests-list {
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+	margin-top: 40px;
+}
+
+/* PANEL */
+
+.interest-panel {
+	position: relative;
+
+	display: grid;
+	grid-template-columns: 220px 1fr;
+	gap: 24px;
+	align-items: stretch;
+
+	padding: 18px;
+
+	background: rgba(20, 20, 20, 0.78);
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+
+	border: 1px solid rgba(255, 255, 255, 0.1);
+
+	box-shadow:
+		inset 1px 1px 0 rgba(255, 255, 255, 0.16),
+		inset -1px -1px 0 rgba(255, 255, 255, 0.05),
+		0 12px 28px rgba(255, 255, 255, 0.08),
+		0 0 20px rgba(255, 255, 255, 0.06);
+
+	overflow: hidden;
+
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease,
+		background 0.25s ease;
+}
+
+/* inner frame */
+.interest-panel::before {
+	content: "";
+	position: absolute;
+	inset: 6px;
+
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	pointer-events: none;
+}
+
+/* subtle energy sheen */
+.interest-panel::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+
+	background: linear-gradient(
+		120deg,
+		transparent 20%,
+		rgba(255, 255, 255, 0.05) 50%,
+		transparent 80%
+	);
+
+	transform: translateX(-120%);
+	pointer-events: none;
+}
+
+.interest-panel:hover {
+	transform: translateY(-4px);
+	background: rgba(28, 28, 28, 0.88);
+
+	box-shadow:
+		inset 1px 1px 0 rgba(255, 255, 255, 0.22),
+		inset -1px -1px 0 rgba(255, 255, 255, 0.06),
+		0 16px 34px rgba(255, 255, 255, 0.1),
+		0 0 28px rgba(255, 255, 255, 0.1);
+}
+
+.interest-panel:hover::after {
+	animation: interestPanelGleam 2.2s linear infinite;
+}
+
+@keyframes interestPanelGleam {
+	from {
+		transform: translateX(-120%);
+	}
+	to {
+		transform: translateX(120%);
+	}
+}
+
+/* VISUAL BLOCK */
+
+.interest-visual {
+	position: relative;
+
+	min-height: 150px;
+
+	display: flex;
+	align-items: end;
+	justify-content: start;
+
+	padding: 16px;
+
+	background:
+		linear-gradient(
+			180deg,
+			rgba(255, 255, 255, 0.04),
+			rgba(255, 255, 255, 0.01)
+		),
+		rgba(255, 255, 255, 0.02);
+
+	border: 1px solid rgba(255, 255, 255, 0.1);
+
+	box-shadow:
+		inset 1px 1px 0 rgba(255, 255, 255, 0.1),
+		0 8px 18px rgba(255, 255, 255, 0.04);
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	overflow: hidden;
+}
+
+/* subtle label inside visual block */
+.interest-visual-label {
+	position: relative;
+	z-index: 1;
+
+	display: inline-block;
+	padding: 6px 10px;
+
+	background: rgba(0, 0, 0, 0.45);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+
+	color: rgba(255, 255, 255, 0.88);
+	font-size: 0.85rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+}
+
+/* CONTENT */
+
+.interest-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.interest-title {
+	margin: 0 0 12px 0;
+
+	color: white;
+	font-size: 1.15rem;
+	font-weight: 700;
+}
+
+.interest-description {
+	margin: 0;
+
+	line-height: 1.75;
+	color: rgba(255, 255, 255, 0.78);
+}
+
+/* OPTIONAL IMAGES LATER */
+
+.interest-panel:nth-child(1) .interest-visual {
+	background-image: url("/hiking.jpg");
+}
+
+.interest-panel:nth-child(2) .interest-visual {
+	background-image: url("/warhammer.jpg");
+}
+
+.interest-panel:nth-child(3) .interest-visual {
+	background-image: url("/martial.jpg");
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+	.interest-panel {
+		grid-template-columns: 1fr;
+		gap: 18px;
+	}
+
+	.interest-visual {
+		min-height: 180px;
+	}
+}
