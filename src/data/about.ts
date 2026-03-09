@@ -63,28 +63,28 @@ export const about = {
 			title: "Coding Factory Bootcamp",
 			issuer: "Athens University of Economics and Business",
 			year: "2025",
-			file: "/certificates/bootcamp.pdf",
+			file: `${import.meta.env.BASE_URL}/certificates/bootcamp.pdf`,
 		},
 
 		{
 			title: "The Complete SQL Bootcamp: Go from Zero to Hero",
 			issuer: "Udemy",
 			year: "2026",
-			file: "/certificates/sql.pdf",
+			file: `${import.meta.env.BASE_URL}/certificates/sql.pdf`,
 		},
 
 		{
 			title: "Django - The Complete Course 2026 (Beginner + Advanced + AI)",
 			issuer: "Udemy",
 			year: "2026",
-			file: "/certificates/django.pdf",
+			file: `${import.meta.env.BASE_URL}/certificates/django.pdf`,
 		},
 
 		{
 			title: "The Complete Full-Stack Web Development Bootcamp",
 			issuer: "Udemy",
 			year: "2026",
-			file: "/certificates/web.pdf",
+			file: `${import.meta.env.BASE_URL}/certificates/web.pdf`,
 		},
 	],
 
@@ -128,18 +128,21 @@ export const about = {
 			title: "Hiking",
 			description:
 				"Active mountain guide and organizer of volunteer hiking groups.",
+			image: `${import.meta.env.BASE_URL}/images/hiking.jpg`,
 		},
 
 		{
 			title: "Warhammer 40K",
 			description:
 				"Competitive tabletop strategy and match statistics analysis.",
+			image: `${import.meta.env.BASE_URL}/images/warhammer.jpg`,
 		},
 
 		{
 			title: "Martial Arts",
 			description:
 				"Former competitive martial arts training that developed discipline and competitive mindset.",
+			image: ``,
 		},
 	],
 };

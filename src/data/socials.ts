@@ -9,10 +9,10 @@ export const socials = [
 	},
 	{
 		name: "Email",
-		url: "mailto:giorgosdurieux@gmail.com.com",
+		url: "mailto:giorgosdurieux@gmail.com",
 	},
 	{
 		name: "Resume",
-		url: "/resume.pdf",
+		url: "`${import.meta.env.BASE_URL}/files/resume.pdf`",
 	},
 ];
