@@ -169,7 +169,7 @@
 /* OPTIONAL IMAGES LATER */
 
 .interest-panel:nth-child(1) .interest-visual {
-	background-image: url("/images/martial.jpg");
+	background-image: url("/images/hiking.png");
 }
 
 .interest-panel:nth-child(2) .interest-visual {
