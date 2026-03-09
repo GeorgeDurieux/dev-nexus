@@ -3,5 +3,5 @@ export const profile = {
 
 	title: "Software Developer",
 
-	image: "/profile.jpg",
+	image: "src={`${import.meta.env.BASE_URL}/profile.jpg`}",
 };
