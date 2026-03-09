@@ -169,15 +169,15 @@
 /* OPTIONAL IMAGES LATER */
 
 .interest-panel:nth-child(1) .interest-visual {
-	background-image: url("/images/hiking.png");
+	background-image: url("/pictures/hiking.png");
 }
 
 .interest-panel:nth-child(2) .interest-visual {
-	background-image: url("/images/martial.jpg");
+	background-image: url("/pictures/martial.jpg");
 }
 
 .interest-panel:nth-child(3) .interest-visual {
-	background-image: url("/images/martial.jpg");
+	background-image: url("/pictures/martial.jpg");
 }
 
 /* RESPONSIVE */
