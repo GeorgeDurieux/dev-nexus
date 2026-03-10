@@ -13,6 +13,6 @@ export const socials = [
 	},
 	{
 		name: "Resume",
-		url: "`${import.meta.env.BASE_URL}/files/resume.pdf`",
+		url: "`${import.meta.env.BASE_URL}/files/cv.pdf`",
 	},
 ];
