@@ -7,11 +7,11 @@ interface Props {
 
 export default function SkillCard({ skill }: Props) {
 	const hardcodedIcons: Record<string, string> = {
-		minio: "/dev-nexus/icons/minio.png",
-		celery: "/dev-nexus/icons/celery.png",
-		async: "/dev-nexus/icons/async.png",
-		axios: "/dev-nexus/icons/axios.svg",
-		junit: "/dev-nexus/icons/junit.svg",
+		minio: "/icons/minio.png",
+		celery: "/icons/celery.png",
+		async: "/icons/async.png",
+		axios: "/icons/axios.svg",
+		junit: "/icons/junit.svg",
 	};
 
 	const skillKey = skill.icon.toLowerCase();
