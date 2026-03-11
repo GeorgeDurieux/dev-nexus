@@ -63,28 +63,28 @@ export const about = {
 			title: "Coding Factory Bootcamp",
 			issuer: "Athens University of Economics and Business",
 			year: "2025",
-			file: `${import.meta.env.BASE_URL}/certificates/bootcamp.pdf`,
+			file: `certificates/bootcamp.pdf`,
 		},
 
 		{
 			title: "The Complete SQL Bootcamp: Go from Zero to Hero",
 			issuer: "Udemy",
 			year: "2026",
-			file: `${import.meta.env.BASE_URL}/certificates/sql.pdf`,
+			file: `/certificates/sql.pdf`,
 		},
 
 		{
 			title: "Django - The Complete Course 2026 (Beginner + Advanced + AI)",
 			issuer: "Udemy",
 			year: "2026",
-			file: `${import.meta.env.BASE_URL}/certificates/django.pdf`,
+			file: `/certificates/django.pdf`,
 		},
 
 		{
 			title: "The Complete Full-Stack Web Development Bootcamp",
 			issuer: "Udemy",
 			year: "2026",
-			file: `${import.meta.env.BASE_URL}/certificates/web.pdf`,
+			file: `/certificates/web.pdf`,
 		},
 	],
 
