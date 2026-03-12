@@ -11,8 +11,8 @@ export const socials = [
 		name: "Email",
 		url: "mailto:giorgosdurieux@gmail.com",
 	},
-	{
-		name: "Resume",
-		url: `/files/cv.pdf`,
-	},
+	// {
+	// 	name: "Resume",
+	// 	url: `/files/cv.pdf`,
+	// },
 ];
