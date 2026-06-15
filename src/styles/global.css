@@ -15,7 +15,7 @@
 
 	--accent: #ffffff;
 
-	/* CARD SHADOWS */
+		/* CARD SHADOWS */
 
 	--box-shadow:
 		0 10px 24px rgba(255, 255, 255, 0.14),
@@ -25,9 +25,41 @@
 		0 18px 44px rgba(255, 255, 255, 0.2),
 		0 0 28px rgba(255, 255, 255, 0.28), 0 0 80px rgba(255, 255, 255, 0.2);
 
-	/* SOFTER CARD SHADOW */
-
 	--card-shadow-soft: 0 8px 20px rgba(255, 255, 255, 0.08);
+
+	/* GLEAM */
+
+	--gleam-bg: linear-gradient(
+		120deg,
+		transparent,
+		rgba(255, 255, 255, 0.08) 50%,
+		transparent
+	);
+
+	--gleam-mask: linear-gradient(
+		to right,
+		transparent,
+		white 15%,
+		white 85%,
+		transparent
+	);
+
+	/* RESTING SHADOW — all interactive elements */
+	--shadow-rest:
+		inset 0 0 14px rgba(255, 255, 255, 0.06),
+		0 12px 28px rgba(255, 255, 255, 0.08),
+		0 0 20px rgba(255, 255, 255, 0.07);
+
+	/* HOVER GLOW — all interactive elements */
+	--glow-card:
+		inset 0 0 22px rgba(255, 255, 255, 0.1),
+		0 16px 34px rgba(255, 255, 255, 0.1),
+		0 0 28px rgba(255, 255, 255, 0.1);
+
+	--glow-panel:
+		inset 0 0 22px rgba(255, 255, 255, 0.1),
+		0 16px 34px rgba(255, 255, 255, 0.1),
+		0 0 28px rgba(255, 255, 255, 0.1);
 }
 
 /* GLOBAL BODY */
@@ -38,4 +70,9 @@ body {
 
 	background: var(--bg-primary);
 	color: var(--text-primary);
+}
+
+@keyframes gleam {
+	from { transform: translateX(-120%); }
+	to   { transform: translateX(120%); }
 }

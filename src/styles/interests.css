@@ -27,11 +27,7 @@
 
 	border: 1px solid rgba(255, 255, 255, 0.1);
 
-	box-shadow:
-		inset 1px 1px 0 rgba(255, 255, 255, 0.16),
-		inset -1px -1px 0 rgba(255, 255, 255, 0.05),
-		0 12px 28px rgba(255, 255, 255, 0.08),
-		0 0 20px rgba(255, 255, 255, 0.06);
+	box-shadow: var(--shadow-rest);
 
 	overflow: hidden;
 
@@ -41,29 +37,15 @@
 		background 0.25s ease;
 }
 
-/* inner frame */
-.interest-panel::before {
-	content: "";
-	position: absolute;
-	inset: 6px;
-
-	border: 1px solid rgba(255, 255, 255, 0.08);
-	pointer-events: none;
-}
 
 /* subtle energy sheen */
 .interest-panel::after {
 	content: "";
 	position: absolute;
 	inset: 0;
-
-	background: linear-gradient(
-		120deg,
-		transparent 20%,
-		rgba(255, 255, 255, 0.05) 50%,
-		transparent 80%
-	);
-
+	-webkit-mask-image: var(--gleam-mask);
+	mask-image: var(--gleam-mask);
+	background: var(--gleam-bg);
 	transform: translateX(-120%);
 	pointer-events: none;
 }
@@ -71,25 +53,11 @@
 .interest-panel:hover {
 	transform: translateY(-4px);
 	background: rgba(28, 28, 28, 0.88);
-
-	box-shadow:
-		inset 1px 1px 0 rgba(255, 255, 255, 0.22),
-		inset -1px -1px 0 rgba(255, 255, 255, 0.06),
-		0 16px 34px rgba(255, 255, 255, 0.1),
-		0 0 28px rgba(255, 255, 255, 0.1);
+	box-shadow: var(--glow-panel);
 }
 
 .interest-panel:hover::after {
-	animation: interestPanelGleam 2.2s linear infinite;
-}
-
-@keyframes interestPanelGleam {
-	from {
-		transform: translateX(-120%);
-	}
-	to {
-		transform: translateX(120%);
-	}
+	animation: gleam 2.2s linear infinite;
 }
 
 /* VISUAL BLOCK */

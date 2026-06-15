@@ -1,0 +1,22 @@
+.layout {
+	display: flex;
+}
+
+.main-content {
+	margin-left: 220px;
+	width: calc(100% - 220px);
+	min-height: 100vh;
+}
+
+.main-section {
+	width: 100%;
+	max-width: 720px;
+	margin: 0 auto;
+	padding: 60px 24px;
+}
+
+.section-title {
+	margin-top: 0;
+	margin-bottom: 28px;
+	text-align: center;
+}

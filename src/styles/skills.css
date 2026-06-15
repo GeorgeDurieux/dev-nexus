@@ -54,9 +54,7 @@
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 
-	box-shadow:
-		0 8px 18px rgba(255, 255, 255, 0.05),
-		0 0 12px rgba(255, 255, 255, 0.06);
+	box-shadow: var(--shadow-rest);
 
 	transition:
 		transform 0.22s ease,
@@ -72,40 +70,21 @@
 	content: "";
 	position: absolute;
 	inset: 0;
-
-	background: linear-gradient(
-		120deg,
-		transparent 20%,
-		rgba(255, 255, 255, 0.06) 50%,
-		transparent 80%
-	);
-
+	-webkit-mask-image: var(--gleam-mask);
+	mask-image: var(--gleam-mask);
+	background: var(--gleam-bg);
 	transform: translateX(-120%);
 	pointer-events: none;
 }
 
 .skills-card:hover {
 	transform: translateY(-3px);
-
 	background: rgba(28, 28, 28, 0.88);
-
-	box-shadow:
-		0 12px 24px rgba(255, 255, 255, 0.08),
-		0 0 20px rgba(255, 255, 255, 0.1),
-		0 0 40px rgba(255, 255, 255, 0.08);
+	box-shadow: var(--glow-card);
 }
 
 .skills-card:hover::before {
-	animation: skillPillGleam 1.8s linear infinite;
-}
-
-@keyframes skillPillGleam {
-	from {
-		transform: translateX(-120%);
-	}
-	to {
-		transform: translateX(120%);
-	}
+	animation: gleam 2.2s linear infinite;
 }
 
 /* ICON */

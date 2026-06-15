@@ -25,11 +25,7 @@
 
 	border: 1px solid rgba(255, 255, 255, 0.12);
 
-	box-shadow:
-		inset 1px 1px 0 rgba(255, 255, 255, 0.18),
-		inset -1px -1px 0 rgba(255, 255, 255, 0.05),
-		0 12px 28px rgba(255, 255, 255, 0.08),
-		0 0 20px rgba(255, 255, 255, 0.07);
+	box-shadow: var(--shadow-rest);
 
 	overflow: hidden;
 
@@ -40,25 +36,16 @@
 		transform 0.25s ease;
 }
 
-/* stronger inner frame */
-.education-card::before {
-	content: "";
-	position: absolute;
-	inset: 5px;
 
-	border: 1px solid rgba(255, 255, 255, 0.1);
-	pointer-events: none;
-}
-
-/* stronger top highlight line */
+/* gleam */
 .education-card::after {
 	content: "";
 	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 1px;
-	background: rgba(255, 255, 255, 0.16);
+	inset: 0;
+	-webkit-mask-image: var(--gleam-mask);
+	mask-image: var(--gleam-mask);
+	background: var(--gleam-bg);
+	transform: translateX(-120%);
 	pointer-events: none;
 }
 
@@ -66,12 +53,11 @@
 .education-card:hover {
 	background: rgba(28, 28, 28, 0.88);
 	transform: translateY(-3px);
+	box-shadow: var(--glow-panel);
+}
 
-	box-shadow:
-		inset 1px 1px 0 rgba(255, 255, 255, 0.22),
-		inset -1px -1px 0 rgba(255, 255, 255, 0.06),
-		0 16px 34px rgba(255, 255, 255, 0.1),
-		0 0 28px rgba(255, 255, 255, 0.1);
+.education-card:hover::after {
+	animation: gleam 2.2s linear infinite;
 }
 
 .education-card--certificate {
@@ -113,9 +99,7 @@
 	font-weight: 600;
 	cursor: pointer;
 
-	box-shadow:
-		inset 1px 1px 0 rgba(255, 255, 255, 0.1),
-		0 4px 10px rgba(255, 255, 255, 0.05);
+	box-shadow: var(--shadow-rest);
 
 	transition:
 		transform 0.2s ease,
@@ -126,10 +110,7 @@
 .education-card-button:hover {
 	transform: scale(1.03);
 	background: rgba(255, 255, 255, 0.1);
-	box-shadow:
-		inset 1px 1px 0 rgba(255, 255, 255, 0.14),
-		0 10px 24px rgba(255, 255, 255, 0.1),
-		0 0 20px rgba(255, 255, 255, 0.12);
+	box-shadow: var(--glow-panel);
 }
 
 @media (max-width: 900px) {

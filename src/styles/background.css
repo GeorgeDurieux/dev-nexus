@@ -5,6 +5,7 @@
 	pointer-events: none;
 	overflow: hidden;
 	background: #000000;
+	opacity: 0.35;
 }
 
 .animated-background-canvas {

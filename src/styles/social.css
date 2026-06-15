@@ -16,9 +16,7 @@
 
 	border: 1px solid rgba(255, 255, 255, 0.08);
 
-	box-shadow:
-		0 8px 20px rgba(255, 255, 255, 0.06),
-		0 0 14px rgba(255, 255, 255, 0.08);
+	box-shadow: var(--shadow-rest);
 
 	font-size: 1.08rem;
 	font-weight: 700;
@@ -37,14 +35,9 @@
 	content: "";
 	position: absolute;
 	inset: 0;
-
-	background: linear-gradient(
-		120deg,
-		transparent 20%,
-		rgba(255, 255, 255, 0.07) 50%,
-		transparent 80%
-	);
-
+	-webkit-mask-image: var(--gleam-mask);
+	mask-image: var(--gleam-mask);
+	background: var(--gleam-bg);
 	transform: translateX(-120%);
 	pointer-events: none;
 }
@@ -52,22 +45,9 @@
 .social-card:hover {
 	transform: scale(1.04);
 	background: rgba(28, 28, 28, 0.86);
-
-	box-shadow:
-		0 14px 34px rgba(255, 255, 255, 0.1),
-		0 0 30px rgba(255, 255, 255, 0.18),
-		0 0 70px rgba(255, 255, 255, 0.12);
+	box-shadow: var(--glow-card);
 }
 
 .social-card:hover::before {
-	animation: socialCardGleam 1.8s linear infinite;
-}
-
-@keyframes socialCardGleam {
-	from {
-		transform: translateX(-120%);
-	}
-	to {
-		transform: translateX(120%);
-	}
+	animation: gleam 2.2s linear infinite;
 }
