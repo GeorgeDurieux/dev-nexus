@@ -5,14 +5,15 @@ interface Props {
 	skill: Skill;
 }
 
+const hardcodedIcons: Record<string, string> = {
+	minio: "/icons/minio.png",
+	celery: "/icons/celery.png",
+	async: "/icons/async.png",
+	axios: "/icons/axios.svg",
+	junit: "/icons/junit.svg",
+};
+
 export default function SkillCard({ skill }: Props) {
-	const hardcodedIcons: Record<string, string> = {
-		minio: "/icons/minio.png",
-		celery: "/icons/celery.png",
-		async: "/icons/async.png",
-		axios: "/icons/axios.svg",
-		junit: "/icons/junit.svg",
-	};
 
 	const skillKey = skill.icon.toLowerCase();
 

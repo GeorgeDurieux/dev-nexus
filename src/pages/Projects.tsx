@@ -12,11 +12,19 @@ import "../styles/projects.css";
 
 export default function Projects() {
 	const [repos, setRepos] = useState<GitHubRepo[]>([]);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
 		async function loadRepos() {
-			const data = await fetchRepos(repoName);
-			setRepos(data);
+			try {
+				const data = await fetchRepos(repoName);
+				setRepos(data);
+			} catch (err) {
+				setError(err instanceof Error ? err.message : "Failed to load projects.");
+			} finally {
+				setLoading(false);
+			}
 		}
 
 		loadRepos();
@@ -26,6 +34,14 @@ export default function Projects() {
 		<PageLayout>
 			<div className="projects-page">
 				<PageTitle title="Projects" />
+
+				{loading && <p className="projects-status">Loading projects...</p>}
+
+				{error && <p className="projects-status projects-error">{error}</p>}
+
+				{!loading && !error && repos.length === 0 && (
+					<p className="projects-status">No projects found.</p>
+				)}
 
 				<div className="repo-container">
 					{repos.map((repo) => (
