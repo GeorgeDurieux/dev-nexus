@@ -141,11 +141,11 @@
 }
 
 .interest-panel:nth-child(2) .interest-visual {
-	background-image: url("/pictures/martial.jpg");
+	background-image: url("/pictures/tau.png");
 }
 
 .interest-panel:nth-child(3) .interest-visual {
-	background-image: url("/pictures/martial.jpg");
+	background-image: url("/pictures/wadoryu_flag.svg");
 }
 
 /* RESPONSIVE */
