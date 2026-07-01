@@ -1,5 +1,6 @@
 import AnimatedBackground from "./components/AnimatedBackground";
 import Sidebar from "./components/Sidebar";
+import MobileNav from "./components/MobileNav";
 
 import About from "./pages/About";
 import Skills from "./pages/Skills";
@@ -18,6 +19,7 @@ export default function App() {
 	return (
 		<>
 			<AnimatedBackground />
+			<MobileNav />
 			<div className="layout">
 				<Sidebar />
 				<main className="main-content">

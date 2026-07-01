@@ -64,10 +64,18 @@
 
 /* GLOBAL BODY */
 
-body {
-	margin: 0;
-	font-family: system-ui, sans-serif;
+*, *::before, *::after {
+	box-sizing: border-box;
+}
 
+html, body {
+	margin: 0;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: system-ui, sans-serif;
 	background: var(--bg-primary);
 	color: var(--text-primary);
 }

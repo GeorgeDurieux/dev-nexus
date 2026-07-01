@@ -8,6 +8,21 @@
 	min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+	.main-content {
+		margin-left: 0 !important;
+		width: 100% !important;
+		padding-top: 56px;
+		overflow-x: hidden;
+	}
+
+	.main-section {
+		padding: 40px 16px;
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+}
+
 .main-section {
 	width: 100%;
 	max-width: 720px;
