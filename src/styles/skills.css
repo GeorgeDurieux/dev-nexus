@@ -50,7 +50,7 @@
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	border-radius: 999px;
 
-	background: rgba(20, 20, 20, 0.78);
+	background: rgba(8, 10, 28, 0.80);
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 
@@ -79,7 +79,7 @@
 
 .skills-card:hover {
 	transform: translateY(-3px);
-	background: rgba(28, 28, 28, 0.88);
+	background: rgba(14, 18, 42, 0.90);
 	box-shadow: var(--glow-card);
 }
 

@@ -13,11 +13,11 @@
 
 	padding: 36px 32px;
 
-	background: rgba(20, 20, 20, 0.8);
+	background: rgba(8, 10, 28, 0.80);
 	backdrop-filter: blur(6px);
 	-webkit-backdrop-filter: blur(6px);
 
-	border: 1px solid rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 
 	box-shadow: var(--shadow-rest);
 
@@ -60,7 +60,7 @@
 
 	width: 88%;
 	height: 1px;
-	background: rgba(255, 255, 255, 0.14);
+	background: rgba(18, 24, 52, 0.92);
 
 	box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
@@ -68,7 +68,7 @@
 /* hover pop */
 .about-bio:hover {
 	transform: translateY(-4px);
-	background: rgba(28, 28, 28, 0.88);
+	background: rgba(14, 18, 42, 0.90);
 	box-shadow: var(--glow-panel);
 }
 
@@ -113,10 +113,10 @@
 
 	padding: 22px;
 
-	background: rgba(20, 20, 20, 0.72);
+	background: rgba(8, 10, 28, 0.78);
 	backdrop-filter: blur(6px);
 
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.18);
 
 	box-shadow: var(--shadow-rest);
 
@@ -143,7 +143,7 @@
 .about-card:hover {
 	transform: scale(1.03);
 	box-shadow: var(--glow-card);
-	background: rgba(30, 30, 30, 0.82);
+	background: rgba(12, 16, 38, 0.86);
 }
 
 .about-card:hover::before {
@@ -177,8 +177,8 @@
 	margin-top: 16px;
 	padding: 10px 14px;
 
-	border: 1px solid rgba(255, 255, 255, 0.12);
-	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: rgba(8, 10, 28, 0.78);
 
 	color: white;
 	font-weight: 600;
@@ -195,7 +195,7 @@
 
 .about-card-button:hover {
 	transform: scale(1.03);
-	background: rgba(255, 255, 255, 0.08);
+	background: rgba(12, 16, 38, 0.86);
 	box-shadow: var(--glow-panel);
 }
 

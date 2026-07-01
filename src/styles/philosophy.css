@@ -12,10 +12,10 @@
 	width: 100%;
 	padding: 28px 26px;
 
-	background: rgba(20, 20, 20, 0.82);
+	background: rgba(8, 10, 28, 0.80);
 	backdrop-filter: blur(6px);
 
-	border: 1px solid rgba(255, 255, 255, 0.12);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-left: 2px solid rgba(255, 255, 255, 0.22);
 
 	box-shadow: var(--shadow-rest);
@@ -46,7 +46,7 @@
 
 .philosophy-card:hover {
 	transform: translateY(-4px);
-	background: rgba(28, 28, 28, 0.9);
+	background: rgba(14, 18, 42, 0.90);
 	box-shadow: var(--glow-panel);
 }
 

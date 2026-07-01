@@ -1,15 +1,87 @@
+/* ── BASE ──────────────────────────────────────────── */
+
 .animated-background {
 	position: fixed;
 	inset: 0;
 	z-index: -1;
 	pointer-events: none;
 	overflow: hidden;
-	background: #000000;
-	opacity: 0.35;
+
+	background: linear-gradient(
+		145deg,
+		#08091e 0%,
+		#060818 40%,
+		#040510 70%,
+		#020308 100%
+	);
 }
 
-.animated-background-canvas {
-	display: block;
-	width: 100%;
-	height: 100%;
+/* ── ORBS ──────────────────────────────────────────── */
+
+.bg-orb {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(80px);
+}
+
+/* indigo — top left, largest */
+.bg-orb--1 {
+	width: 70vw;
+	height: 70vw;
+	top: -20%;
+	left: -15%;
+	background: radial-gradient(
+		circle,
+		rgba(55, 25, 130, 0.65) 0%,
+		rgba(40, 15, 100, 0.3) 40%,
+		transparent 70%
+	);
+	animation: orbDrift1 28s ease-in-out infinite alternate;
+}
+
+/* cobalt blue — bottom right */
+.bg-orb--2 {
+	width: 65vw;
+	height: 65vw;
+	bottom: -20%;
+	right: -10%;
+	background: radial-gradient(
+		circle,
+		rgba(15, 60, 160, 0.55) 0%,
+		rgba(10, 40, 110, 0.25) 45%,
+		transparent 70%
+	);
+	animation: orbDrift2 34s ease-in-out infinite alternate;
+}
+
+/* teal — center, creates mid-page depth */
+.bg-orb--3 {
+	width: 45vw;
+	height: 45vw;
+	top: 35%;
+	right: 20%;
+	background: radial-gradient(
+		circle,
+		rgba(10, 80, 110, 0.38) 0%,
+		rgba(5, 50, 80, 0.15) 50%,
+		transparent 70%
+	);
+	animation: orbDrift3 22s ease-in-out infinite alternate;
+}
+
+/* ── DRIFT ANIMATIONS ──────────────────────────────── */
+
+@keyframes orbDrift1 {
+	from { transform: translate(0, 0);      }
+	to   { transform: translate(8%, 14%);   }
+}
+
+@keyframes orbDrift2 {
+	from { transform: translate(0, 0);      }
+	to   { transform: translate(-10%, -9%); }
+}
+
+@keyframes orbDrift3 {
+	from { transform: translate(0, 0);      }
+	to   { transform: translate(-6%, 10%);  }
 }

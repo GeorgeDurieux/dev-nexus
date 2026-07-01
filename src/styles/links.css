@@ -17,10 +17,10 @@
 
 	color: white;
 
-	background: rgba(20, 20, 20, 0.75);
+	background: rgba(8, 10, 28, 0.80);
 	backdrop-filter: blur(6px);
 
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	border: 1px solid rgba(255, 255, 255, 0.18);
 
 	font-size: 1.2rem;
 	font-weight: 700;
@@ -55,7 +55,7 @@
 .link-card:hover {
 	transform: scale(1.05);
 	box-shadow: var(--glow-card);
-	background: rgba(30, 30, 30, 0.85);
+	background: rgba(14, 18, 42, 0.90);
 }
 
 .link-card:hover::before {
