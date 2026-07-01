@@ -1,10 +1,11 @@
+import PageTitle from "./PageTitle";
 import { about } from "../data/about";
 import "../styles/philosophy.css";
 
 export default function PhilosophySection() {
 	return (
 		<section className="about-section philosophy-section">
-			<h2 className="about-section-title">Tech Philosophy</h2>
+			<PageTitle title="Tech Philosophy" number="07" />
 
 			<div className="philosophy-list">
 				{about.philosophy.map((item, index) => (

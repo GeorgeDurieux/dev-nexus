@@ -1,3 +1,4 @@
+import PageTitle from "./PageTitle";
 import { about } from "../data/about";
 import SkillCard from "./SkillCard";
 
@@ -6,7 +7,7 @@ import "../styles/skills.css";
 export default function LearningSection() {
 	return (
 		<section className="about-section">
-			<h2 className="about-section-title">Currently Learning</h2>
+			<PageTitle title="Currently Learning" number="05" />
 
 			<div className="skills-grid">
 				{about.learning.map((skill) => (

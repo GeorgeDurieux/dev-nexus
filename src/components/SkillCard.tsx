@@ -8,7 +8,7 @@ interface Props {
 const hardcodedIcons: Record<string, string> = {
 	minio: "/icons/minio.png",
 	celery: "/icons/celery.png",
-	async: "/icons/async.png",
+	async: "/icons/async.svg",
 	axios: "/icons/axios.svg",
 	junit: "/icons/junit.svg",
 };

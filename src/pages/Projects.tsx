@@ -36,7 +36,7 @@ export default function Projects() {
 
 	return (
 		<>
-			<PageTitle title="Projects" />
+			<PageTitle title="Projects" number="06" />
 
 			{loading && <p className="projects-status">Loading projects...</p>}
 			{error && <p className="projects-status projects-error">{error}</p>}

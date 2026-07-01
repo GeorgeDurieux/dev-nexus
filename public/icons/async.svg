@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+  <!-- outer arc: large clockwise arc, arrow at bottom-right -->
+  <path d="M 256 48 A 208 208 0 1 1 88 360" />
+  <polyline points="60,400 80,352 128,378" />
+
+  <!-- inner arc: smaller counterclockwise arc, arrow at top-left -->
+  <path d="M 256 160 A 96 96 0 1 0 336 190" />
+  <polyline points="364,162 340,208 292,190" />
+</svg>

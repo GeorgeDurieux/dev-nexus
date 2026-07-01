@@ -1,10 +1,11 @@
+import PageTitle from "./PageTitle";
 import { about } from "../data/about";
 import "../styles/interests.css";
 
 export default function InterestsSection() {
 	return (
 		<section className="about-section interests-section">
-			<h2 className="about-section-title">Outside of Coding</h2>
+			<PageTitle title="Outside of Coding" number="08" />
 
 			<div className="interests-list">
 				{about.interests.map((item, index) => (

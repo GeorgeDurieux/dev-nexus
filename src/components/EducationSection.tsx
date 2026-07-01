@@ -1,3 +1,4 @@
+import PageTitle from "./PageTitle";
 import { useState } from "react";
 import { about } from "../data/about";
 import CertificateModal from "./CertificateModal";
@@ -10,7 +11,7 @@ export default function EducationSection() {
 
 	return (
 		<section className="about-section education-section">
-			<h2 className="about-section-title">Education & Certifications</h2>
+			<PageTitle title="Education & Certifications" number="03" />
 
 			<div className="education-grid">
 				{about.education.map((item, index) => (

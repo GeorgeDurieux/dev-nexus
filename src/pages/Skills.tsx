@@ -6,7 +6,7 @@ import "../styles/skills.css";
 export default function Skills() {
 	return (
 		<>
-			<PageTitle title="Skills" />
+			<PageTitle title="Skills" number="04" />
 
 			<div className="skills-categories">
 				{skillCategories.map((category) => (

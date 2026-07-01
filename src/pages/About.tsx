@@ -5,7 +5,7 @@ import "../styles/about.css";
 export default function About() {
 	return (
 		<>
-			<PageTitle title="Bio" />
+			<PageTitle title="Bio" number="01" />
 
 			<section className="about-bio">
 				{about.bio.map((paragraph, index) => (

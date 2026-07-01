@@ -1,10 +1,11 @@
+import PageTitle from "./PageTitle";
 import { about } from "../data/about";
 import "../styles/timeline.css";
 
 export default function TimelineSection() {
 	return (
 		<section className="about-section timeline-section">
-			<h2 className="about-section-title timeline-title">Journey</h2>
+			<PageTitle title="Journey" number="02" />
 
 			<div className="timeline">
 				{about.timeline.map((item, index) => {
